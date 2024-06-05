@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-image: url('imagenes/contralorias.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+.encabezado {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 20px 0;
+  text-align: center;
+  color: white;
+}
+
+#header {
+  margin: auto;
+  width: 90%;
+  max-width: 1200px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+.nav > li {
+  float: left;
+}
+
+.nav li a {
+  background-color: transparent;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  display: block;
+  transition: background-color 0.3s;
+}
+
+.nav li a:hover {
+  background-color: rgb(63, 87, 65);
+}
+
+.nav li ul {
+  display: none;
+  position: absolute;
+  min-width: 140px;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.nav li:hover > ul {
+  display: block;
+}
+
+.nav li ul li {
+  position: relative;
+}
+
+.nav li ul li ul {
+  right: -140px;
+  top: 0px;
+}
+
+.contenido {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  width: 80%;
+  max-width: 800px;
+  padding: 10px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.contenido img {
+  max-width: 100%;
+  height: auto;
+}
+
+.contenido_infraeca, .contenido_eca, .conten_blog, .conten_info {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  width: 80%;
+  max-width: 800px;
+  padding: 10px;
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 20px;
+}
+
+.contenido_infraeca img, .contenido_eca img, .conten_blog img, .conten_info img {
+  max-width: 80%; /* Ajusta el tamaño máximo al 80% */
+  height: auto;
+}
+
+.conten_info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Estilo específico para el submenú */
+.submenu table {
+  width: 50%; /* Ajusta el ancho del submenú al 50% */
+  max-width: 400px; /* Limita el ancho máximo */
+  table-layout: fixed;
+  margin: 20px 0; /* Añade margen para separación */
+}
+
+.submenu td {
+  text-align: center;
+  vertical-align: top;
+  padding: 10px;
+}
+
+.submenu a {
+  display: block;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9em; /* Reducir tamaño del texto */
+  color: black;
+  background-color: white;
+  padding: 5px 10px; /* Reducir padding */
+  border-radius: 20px;
+  transition: background-color 0.3s, color 0.3s;
+  border: 2px solid #ccc; /* Añade un borde similar al de la imagen */
+  max-width: 100px; /* Limitar ancho del botón */
+  margin: 0 auto; /* Centrar el botón dentro de la celda */
+}
+
+.submenu a:hover {
+  background-color: #ddd; /* Cambia el color de fondo al pasar el mouse */
+  color: #000; /* Cambia el color del texto al pasar el mouse */
+}
+
+.submenu img {
+  margin-top: 10px;
+  max-width: 100px; /* Tamaño aumentado a 100px */
+  height: auto;
+}
+
+/* Estilo para los bloques de texto */
+.text-block {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  width: 80%;
+  max-width: 800px;
+  padding: 20px;
+  text-align: justify;
+  margin: 20px 0;
+  color: white;
+  font-size: 0.8em; /* Tamaño de fuente más pequeño */
+  line-height: 1.6; /* Aumenta el espacio entre renglones */
+}
+
+.text-block h2 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 10px; /* Espacio entre el título y el texto */
+  font-size: 1.1em;
+  color: white;
+}
