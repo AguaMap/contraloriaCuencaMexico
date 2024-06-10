@@ -94,7 +94,7 @@ ul, ol {
   height: auto;
 }
 
-.contenido_infraeca, .contenido_eca, .conten_acerca, .conten_info {
+.conten_acerca, .conten_info {
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   width: 80%;
@@ -105,7 +105,7 @@ ul, ol {
   margin-bottom: 20px;
 }
 
-.contenido_infraeca img, .contenido_eca img, .conten_info img {
+.conten_info img {
   max-width: 80%; /* Ajusta el tamaño máximo al 80% */
   height: auto;
 }
