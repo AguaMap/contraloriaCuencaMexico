@@ -94,6 +94,22 @@ ul, ol {
   height: auto;
 }
 
+.contenido2 {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  width: 80%;
+  max-width: 800px;
+  padding: 10px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.contenido2 img {
+  max-width: 100%;
+  height: auto;
+}
+
 .conten_acerca, .conten_info {
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 10px;
