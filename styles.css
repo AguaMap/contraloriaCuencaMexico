@@ -206,3 +206,9 @@ ul, ol {
   color: white;
 }
 
+.img-thumbnail {
+  height: 200px;
+  object-fit: cover;
+}
+
+
