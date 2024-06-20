@@ -76,6 +76,13 @@ document.addEventListener('DOMContentLoaded', function () {
       'NodoZumpango/NODOZUMPANGO003.jpg',
       'NodoZumpango/NODOZUMPANGO004.jpg',
       'NodoZumpango/NODOZUMPANGO005.jpg'
+    ],
+
+     'carousel-mapas': [
+      'mapas/agentes_contaminantes.jpg',
+      'mapas/control_extraccion.jpg',
+      'mapas/mapa_pozos.jpg',
+      'mapas/riesgo_geologico.jpg'
     ]
   };
 
