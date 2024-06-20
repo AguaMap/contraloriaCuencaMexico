@@ -51,4 +51,3 @@ document.addEventListener('DOMContentLoaded', function () {
     createCarousel(carouselId, images);
   }
 });
-
