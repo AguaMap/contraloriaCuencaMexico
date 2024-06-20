@@ -3,35 +3,15 @@ document.addEventListener('DOMContentLoaded', function () {
     const carouselDiv = document.getElementById(carouselId);
     if (!carouselDiv) return;
 
-    let indicators = '';
     let innerContent = '';
-    images.forEach((image, index) => {
-      indicators += `
-        <button type="button" data-bs-target="#${carouselId}" data-bs-slide-to="${index}" ${index === 0 ? 'class="active"' : ''} aria-current="${index === 0 ? 'true' : 'false'}"></button>`;
-      
+    images.forEach((image) => {
       innerContent += `
-        <div class="carousel-item ${index === 0 ? 'active' : ''}">
-          <img src="${image}" class="d-block w-100" alt="Image ${index + 1}">
-        </div>`;
+        <figure class="gallery-item">
+          <img src="${image}" alt="Imagen">
+        </figure>`;
     });
 
-    carouselDiv.innerHTML = `
-      <div id="${carouselId}" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-          ${indicators}
-        </div>
-        <div class="carousel-inner">
-          ${innerContent}
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#${carouselId}" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#${carouselId}" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>`;
+    carouselDiv.innerHTML = innerContent;
   }
 
   const galleries = {
@@ -50,4 +30,46 @@ document.addEventListener('DOMContentLoaded', function () {
   for (const [carouselId, images] of Object.entries(galleries)) {
     createCarousel(carouselId, images);
   }
+
+  let currentIndex = 0;
+
+  document.querySelector('.prev-button').addEventListener('click', () => {
+    navigate(-1);
+  });
+
+  document.querySelector('.next-button').addEventListener('click', () => {
+    navigate(1);
+  });
+
+  function navigate(direction) {
+    const galleryContainer = document.querySelector('.gallery-container');
+    const totalImages = document.querySelectorAll('.gallery-item').length;
+    
+    currentIndex = (currentIndex + direction + totalImages) % totalImages;
+    const offset = -currentIndex * 100;
+    
+    galleryContainer.style.transform = `translateX(${offset}%)`;
+  }
+
+  // AUTOPLAY
+  let autoplayInterval = null;
+
+  function startAutoplay(interval) {
+    stopAutoplay();  // Detiene cualquier autoplay anterior para evitar múltiples intervalos.
+    autoplayInterval = setInterval(() => {
+      navigate(1);  // Navega a la siguiente imagen cada intervalo de tiempo.
+    }, interval);
+  }
+
+  function stopAutoplay() {
+    clearInterval(autoplayInterval);
+  }
+
+  // Iniciar autoplay con un intervalo de 3 segundos.
+  startAutoplay(3000);
+
+  // Opcional: Detener autoplay cuando el usuario interactúa con los botones de navegación.
+  document.querySelectorAll('.nav-button').forEach(button => {
+    button.addEventListener('click', stopAutoplay);
+  });
 });
