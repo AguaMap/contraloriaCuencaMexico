@@ -49,7 +49,12 @@
             height: 100%;
             margin-bottom: 20px;
         }
-        img { width: 100%; height: 100%; border-radius: 10px; object-fit: cover; }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            object-fit: cover;
+        }
         #item-1:checked ~ .cards #video-3, #item-2:checked ~ .cards #video-1, #item-3:checked ~ .cards #video-2 {
             transform: translatex(-40%) scale(.8);
             opacity: .4;
@@ -128,9 +133,15 @@
             left: 30px;
             transition: transform .4s ease-in;
         }
-        #item-2:checked ~ .player #test { transform: translateY(0); }
-        #item-2:checked ~ .player #test  { transform: translateY(-40px); }
-        #item-3:checked ~ .player #test  { transform: translateY(-80px); }
+        #item-2:checked ~ .player #test {
+            transform: translateY(0);
+        }
+        #item-1:checked ~ .player #test {
+            transform: translateY(-40px);
+        }
+        #item-3:checked ~ .player #test {
+            transform: translateY(-80px);
+        }
     </style>
 </head>
 <body>
@@ -185,13 +196,13 @@
     <input type="radio" name="slider" id="item-3">
     <div class="cards">
       <label class="card" for="item-1" id="video-1">
-        <iframe src="https://drive.google.com/file/d/1kUo2KwMWGMBxqaFmZQihTCkoatzAAs5K/preview" width="640" height="480" allow="autoplay"></iframe>
+        <iframe src="https://drive.google.com/file/d/1kUo2KwMWGMBxqaFmZQihTCkoatzAAs5K/preview" allow="autoplay"></iframe>
       </label>
       <label class="card" for="item-2" id="video-2">
-        <iframe src="https://drive.google.com/file/d/10Bpn0ff9TswSVcGBuyvcntYvlIh5Qzz_/preview" width="640" height="480" allow="autoplay"></iframe>
+        <iframe src="https://drive.google.com/file/d/10Bpn0ff9TswSVcGBuyvcntYvlIh5Qzz_/preview" allow="autoplay"></iframe>
       </label>
       <label class="card" for="item-3" id="video-3">
-        <iframe src="https://drive.google.com/file/d/1kUo2KwMWGMBxqaFmZQihTCkoatzAAs5K/preview" width="640" height="480" allow="autoplay"></iframe>
+        <iframe src="https://drive.google.com/file/d/1kUo2KwMWGMBxqaFmZQihTCkoatzAAs5K/preview" allow="autoplay"></iframe>
       </label>
     </div>
     <div class="player">
@@ -239,3 +250,4 @@
 </script>
 </body>
 </html>
+
