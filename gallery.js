@@ -25,6 +25,14 @@ document.addEventListener('DOMContentLoaded', function () {
       'NodoTexcoco/NODOTEXCOCO007.jpg',
       'NodoTexcoco/NODOTEXCOCO008.jpg'
     ]
+
+    'carousel-lerma': [
+      'NodoLerma/NODOLERMA001.jpg',
+      'NodoLerma/NODOLERMA002.jpg',
+      'NodoLerma/NODOLERMA003.jpg',
+      'NodoLerma/NODOLERMA004.jpg'
+    ]
+
   };
 
   for (const [carouselId, images] of Object.entries(galleries)) {
