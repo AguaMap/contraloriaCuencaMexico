@@ -7,18 +7,6 @@
   box-sizing: border-box;
 }
 
-.titulo-nodo {
-  background-color: rgba(0, 0, 0, 0.7);
-  color: white;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 700;
-  font-size: 1.5em;
-  text-align: center;
-  padding: 10px 20px;
-  border-radius: 10px;
-  margin-top: 20px;
-}
-
 body {
   margin: 0;
   min-height: 100vh;
@@ -37,6 +25,7 @@ body {
   padding: 20px 0;
   text-align: center;
   color: white;
+  font-size: 2em; /* Aumenta el tamaño del título */
 }
 
 #header {
@@ -65,6 +54,7 @@ ul, ol {
   padding: 10px 20px;
   display: block;
   transition: background-color 0.3s;
+  font-size: 1.2em; /* Aumenta el tamaño de la fuente del menú */
 }
 
 .nav li a:hover {
@@ -76,6 +66,7 @@ ul, ol {
   position: absolute;
   min-width: 140px;
   background-color: rgba(0, 0, 0, 0.9);
+  z-index: 1000; /* Asegura que el submenú esté encima de otros elementos */
 }
 
 .nav li:hover > ul {
@@ -145,7 +136,29 @@ ul, ol {
   align-items: center;
 }
 
-/* Estilo básico para la galería */
+/* Estilo para los bloques de texto */
+.text-block {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  width: 80%;
+  max-width: 800px;
+  padding: 20px;
+  text-align: justify;
+  margin: 20px 0;
+  color: white;
+  font-size: 0.8em; /* Tamaño de fuente más pequeño */
+  line-height: 1.6; /* Aumenta el espacio entre renglones */
+}
+
+.text-block h2 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 10px; /* Espacio entre el título y el texto */
+  font-size: 1.1em;
+  color: white;
+}
+
+/* Estilo para la galería */
 figure {
   margin: 0;
 }
@@ -231,27 +244,3 @@ figure {
     padding: 0 5px;
   }
 }
-
-/* Estilo para los bloques de texto */
-.text-block {
-  background-color: rgba(0, 0, 0, 0.7);
-  border-radius: 10px;
-  width: 80%;
-  max-width: 800px;
-  padding: 20px;
-  text-align: justify;
-  margin: 20px 0;
-  color: white;
-  font-size: 0.8em; /* Tamaño de fuente más pequeño */
-  line-height: 1.6; /* Aumenta el espacio entre renglones */
-}
-
-.text-block h2 {
-  text-align: center;
-  margin-top: 0;
-  margin-bottom: 10px; /* Espacio entre el título y el texto */
-  font-size: 1.1em;
-  color: white;
-}
-
-
