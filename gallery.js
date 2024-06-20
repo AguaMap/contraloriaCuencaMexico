@@ -27,14 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
       'NodoTexcoco/NODOTEXCOCO006.jpg',
       'NodoTexcoco/NODOTEXCOCO007.jpg',
       'NodoTexcoco/NODOTEXCOCO008.jpg'
-    ],
-    'gallery-page2': [
-      'path/to/another-image1.jpg',
-      'path/to/another-image2.jpg',
-      'path/to/another-image3.jpg',
-      'path/to/another-image4.jpg'
     ]
-    // Añade más galerías según sea necesario
   };
 
   for (const [galleryId, images] of Object.entries(galleries)) {
