@@ -24,6 +24,17 @@ document.addEventListener('DOMContentLoaded', function () {
       'NodoTexcoco/NODOTEXCOCO006.jpg',
       'NodoTexcoco/NODOTEXCOCO007.jpg',
       'NodoTexcoco/NODOTEXCOCO008.jpg'
+    ],
+
+     'carousel-lerma': [
+      'NodoTexcoco/NODOTEXCOCO001.jpg',
+      'NodoTexcoco/NODOTEXCOCO002.jpg',
+      'NodoTexcoco/NODOTEXCOCO003.jpg',
+      'NodoTexcoco/NODOTEXCOCO004.jpg',
+      'NodoTexcoco/NODOTEXCOCO005.jpg',
+      'NodoTexcoco/NODOTEXCOCO006.jpg',
+      'NodoTexcoco/NODOTEXCOCO007.jpg',
+      'NodoTexcoco/NODOTEXCOCO008.jpg'
     ]
   };
 
