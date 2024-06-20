@@ -278,3 +278,16 @@ figure {
   width: 30px;
   height: 30px;
 }
+
+.descripcion-nodo {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 1.2em; /* Ajusta el tamaño de la fuente */
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
