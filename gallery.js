@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
         </figure>`;
     });
 
-    carouselDiv.querySelector('.gallery-container').innerHTML = innerContent;
+    carouselDiv.innerHTML = innerContent;
   }
 
   const galleries = {
@@ -24,12 +24,6 @@ document.addEventListener('DOMContentLoaded', function () {
       'NodoTexcoco/NODOTEXCOCO006.jpg',
       'NodoTexcoco/NODOTEXCOCO007.jpg',
       'NodoTexcoco/NODOTEXCOCO008.jpg'
-    ],
-    'carousel-lerma': [
-      'NodoLerma/NODOLERMA001.jpg',
-      'NodoLerma/NODOLERMA002.jpg',
-      'NodoLerma/NODOLERMA003.jpg',
-      'NodoLerma/NODOLERMA004.jpg'
     ]
   };
 
@@ -37,29 +31,23 @@ document.addEventListener('DOMContentLoaded', function () {
     createCarousel(carouselId, images);
   }
 
-  document.querySelectorAll('.prev-button').forEach(button => {
-    button.addEventListener('click', () => {
-      const carouselId = button.closest('section').id;
-      navigate(carouselId, -1);
-    });
-  });
-
-  document.querySelectorAll('.next-button').forEach(button => {
-    button.addEventListener('click', () => {
-      const carouselId = button.closest('section').id;
-      navigate(carouselId, 1);
-    });
-  });
-
   let currentIndex = 0;
 
-  function navigate(carouselId, direction) {
-    const galleryContainer = document.querySelector(`#${carouselId} .gallery-container`);
-    const totalImages = document.querySelectorAll(`#${carouselId} .gallery-item`).length;
+  document.querySelector('.prev-button').addEventListener('click', () => {
+    navigate(-1);
+  });
 
+  document.querySelector('.next-button').addEventListener('click', () => {
+    navigate(1);
+  });
+
+  function navigate(direction) {
+    const galleryContainer = document.querySelector('.gallery-container');
+    const totalImages = document.querySelectorAll('.gallery-item').length;
+    
     currentIndex = (currentIndex + direction + totalImages) % totalImages;
     const offset = -currentIndex * 100;
-
+    
     galleryContainer.style.transform = `translateX(${offset}%)`;
   }
 
@@ -69,10 +57,7 @@ document.addEventListener('DOMContentLoaded', function () {
   function startAutoplay(interval) {
     stopAutoplay();  // Detiene cualquier autoplay anterior para evitar múltiples intervalos.
     autoplayInterval = setInterval(() => {
-      document.querySelectorAll('section').forEach(section => {
-        const carouselId = section.id;
-        navigate(carouselId, 1);
-      });
+      navigate(1);  // Navega a la siguiente imagen cada intervalo de tiempo.
     }, interval);
   }
 
