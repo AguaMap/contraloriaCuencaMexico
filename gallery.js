@@ -33,31 +33,34 @@ document.addEventListener('DOMContentLoaded', function () {
     ]
   };
 
-  const carouselIndices = {
-    'carousel-texcoco': 0,
-    'carousel-lerma': 0
-  };
+  for (const [carouselId, images] of Object.entries(galleries)) {
+    createCarousel(carouselId, images);
+  }
+
+  document.querySelectorAll('.prev-button').forEach(button => {
+    button.addEventListener('click', () => {
+      const carouselId = button.closest('section').id;
+      navigate(carouselId, -1);
+    });
+  });
+
+  document.querySelectorAll('.next-button').forEach(button => {
+    button.addEventListener('click', () => {
+      const carouselId = button.closest('section').id;
+      navigate(carouselId, 1);
+    });
+  });
+
+  let currentIndex = 0;
 
   function navigate(carouselId, direction) {
     const galleryContainer = document.querySelector(`#${carouselId} .gallery-container`);
     const totalImages = document.querySelectorAll(`#${carouselId} .gallery-item`).length;
-    
-    carouselIndices[carouselId] = (carouselIndices[carouselId] + direction + totalImages) % totalImages;
-    const offset = -carouselIndices[carouselId] * 100;
-    
+
+    currentIndex = (currentIndex + direction + totalImages) % totalImages;
+    const offset = -currentIndex * 100;
+
     galleryContainer.style.transform = `translateX(${offset}%)`;
-  }
-
-  for (const [carouselId, images] of Object.entries(galleries)) {
-    createCarousel(carouselId, images);
-
-    document.querySelector(`#${carouselId} .prev-button`).addEventListener('click', () => {
-      navigate(carouselId, -1);
-    });
-
-    document.querySelector(`#${carouselId} .next-button`).addEventListener('click', () => {
-      navigate(carouselId, 1);
-    });
   }
 
   // AUTOPLAY
@@ -66,9 +69,10 @@ document.addEventListener('DOMContentLoaded', function () {
   function startAutoplay(interval) {
     stopAutoplay();  // Detiene cualquier autoplay anterior para evitar múltiples intervalos.
     autoplayInterval = setInterval(() => {
-      for (const carouselId of Object.keys(galleries)) {
+      document.querySelectorAll('section').forEach(section => {
+        const carouselId = section.id;
         navigate(carouselId, 1);
-      }
+      });
     }, interval);
   }
 
