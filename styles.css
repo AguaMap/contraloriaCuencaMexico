@@ -283,11 +283,12 @@ figure {
   background-color: rgba(0, 0, 0, 0.7);
   color: white;
   font-family: 'Roboto', sans-serif;
-  font-weight: 700;
   font-size: 1.2em; /* Ajusta el tamaño de la fuente */
   text-align: center;
   padding: 10px 20px;
   border-radius: 10px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin: 20px 0; /* Espacio alrededor del bloque de texto */
+  width: 100%;
+  max-width: 1200px; /* Alineación con el menú */
+  box-sizing: border-box;
 }
