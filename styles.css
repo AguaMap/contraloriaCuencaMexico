@@ -67,24 +67,24 @@ ul, ol {
   background-color: rgb(63, 87, 65);
 }
 
-.nav li ul {
+.nav li ul.sub-menu {
   display: none;
   position: absolute;
-  min-width: 140px;
+  top: 100%; /* Asegura que el submenú se muestre debajo del elemento del menú principal */
+  left: 0;
   background-color: rgba(0, 0, 0, 0.9);
   z-index: 1000; /* Asegura que el submenú esté encima de otros elementos */
-  left: 0;
 }
 
-.nav li:hover > ul {
+.nav li:hover > ul.sub-menu {
   display: block;
 }
 
-.nav li ul li {
+.nav li ul.sub-menu li {
   position: relative;
 }
 
-.nav li ul li ul {
+.nav li ul.sub-menu li ul.sub-menu {
   right: -140px;
   top: 0px;
 }
@@ -262,6 +262,7 @@ figure {
   }
 }
 
+/* Estilo para el título del nodo */
 .titulo-nodo {
   background-color: rgba(0, 0, 0, 0.7);
   color: white;
