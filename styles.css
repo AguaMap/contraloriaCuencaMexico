@@ -29,9 +29,6 @@ body {
 }
 
 #header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   margin: auto;
   width: 90%;
   max-width: 1200px;
@@ -44,13 +41,10 @@ body {
 
 ul, ol {
   list-style: none;
-  display: flex;
-  justify-content: center;
-  flex: 1;
 }
 
 .nav > li {
-  position: relative;
+  float: left;
 }
 
 .nav li a {
@@ -67,36 +61,25 @@ ul, ol {
   background-color: rgb(63, 87, 65);
 }
 
-.nav li ul.sub-menu {
+.nav li ul {
   display: none;
   position: absolute;
-  top: 100%; /* Asegura que el submenú se muestre debajo del elemento del menú principal */
-  left: 0;
+  min-width: 140px;
   background-color: rgba(0, 0, 0, 0.9);
   z-index: 1000; /* Asegura que el submenú esté encima de otros elementos */
 }
 
-.nav li:hover > ul.sub-menu {
+.nav li:hover > ul {
   display: block;
 }
 
-.nav li ul.sub-menu li {
+.nav li ul li {
   position: relative;
 }
 
-.nav li ul.sub-menu li ul.sub-menu {
+.nav li ul li ul {
   right: -140px;
   top: 0px;
-}
-
-.social-icons {
-  display: flex;
-  gap: 10px;
-}
-
-.social-icons a img {
-  width: 30px;
-  height: 30px;
 }
 
 .contenido {
@@ -262,7 +245,6 @@ figure {
   }
 }
 
-/* Estilo para el título del nodo */
 .titulo-nodo {
   background-color: rgba(0, 0, 0, 0.7);
   color: white;
