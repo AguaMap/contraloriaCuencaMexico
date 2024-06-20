@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
       'NodoTexcoco/NODOTEXCOCO006.jpg',
       'NodoTexcoco/NODOTEXCOCO007.jpg',
       'NodoTexcoco/NODOTEXCOCO008.jpg'
-    ]
+    ],
 
     'carousel-lerma': [
       'NodoLerma/NODOLERMA001.jpg',
