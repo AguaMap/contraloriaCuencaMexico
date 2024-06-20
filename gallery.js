@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   const galleries = {
-    'texcoco.html': [
+    'gallery-texcoco': [
       'NodoTexcoco/NODOTEXCOCO001.jpg',
       'NodoTexcoco/NODOTEXCOCO002.jpg',
       'NodoTexcoco/NODOTEXCOCO003.jpg',
