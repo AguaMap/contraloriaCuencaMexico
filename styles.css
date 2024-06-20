@@ -232,5 +232,26 @@ figure {
   }
 }
 
+/* Estilo para los bloques de texto */
+.text-block {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  width: 80%;
+  max-width: 800px;
+  padding: 20px;
+  text-align: justify;
+  margin: 20px 0;
+  color: white;
+  font-size: 0.8em; /* Tamaño de fuente más pequeño */
+  line-height: 1.6; /* Aumenta el espacio entre renglones */
+}
+
+.text-block h2 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 10px; /* Espacio entre el título y el texto */
+  font-size: 1.1em;
+  color: white;
+}
 
 
