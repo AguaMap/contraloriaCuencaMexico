@@ -4,27 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contralorías del Agua</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="styles.css">
     <style> 
-	.carousel-inner > .item > img,
-  	    .carousel-inner > .item > a > img {
-      		width: 60%;
-      		margin: auto;
-  	     }
+        .carousel-inner > .item > img,
+        .carousel-inner > .item > a > img {
+            width: 60%;
+            margin: auto;
+        }
     </style>
-    <script src="gallery.js"></script>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
 <div class="encabezado">
@@ -34,7 +23,7 @@
   <ul class="nav">
     <li><a href="index.html">Inicio</a></li>
     <li><a href="acerca.html">Acerca de</a></li>
-    <li><a href="">Contralorías y Grupos Promotores</a>
+    <li><a href="#">Contralorías y Grupos Promotores</a>
       <ul>
         <li><a href="centro.html">Nodo Centro</a></li>
         <li><a href="lerma.html">Nodo Lerma</a></li>
@@ -62,18 +51,18 @@
       </ul>
     </li>
   </ul>
-    <div class="social-icons">
-       <a href="https://www.instagram.com"><img src="iconos/insta.png" alt="Instagram"></a>
-       <a href="https://www.facebook.com"><img src="iconos/face.png" alt="Facebook"></a>
-       <a href="https://www.twitter.com"><img src="iconos/x.png" alt="Twitter"></a>
-       <a href="mailto:contact@example.com"><img src="iconos/correo.png" alt="Correo"></a>
-    </div>
+  <div class="social-icons">
+    <a href="https://www.instagram.com"><img src="iconos/insta.png" alt="Instagram"></a>
+    <a href="https://www.facebook.com"><img src="iconos/face.png" alt="Facebook"></a>
+    <a href="https://www.twitter.com"><img src="iconos/x.png" alt="Twitter"></a>
+    <a href="mailto:contact@example.com"><img src="iconos/correo.png" alt="Correo"></a>
+  </div>
 </div>
 
 <div class="titulo-nodo">Mapas</div>
     
 <div class="conten_acerca">
- <br>
+  <br>
   <div id="theCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicadores -->
     <ol class="carousel-indicators">
@@ -84,7 +73,7 @@
     </ol>
 
     <div class="carousel-inner" role="listbox">
-      <div class="item active">
+      <div class="carousel-item active">
         <a href="mapas/agentes_contaminantes.jpg" class="image-link">
           <img src="mapas/agentes_contaminantes.jpg" alt="Mapa de agentes contaminantes en la Cuenca"> 
           <div class="carousel-caption d-none d-md-block" style="color: black;">
@@ -93,7 +82,7 @@
         </a>
       </div>
 
-      <div class="item">
+      <div class="carousel-item">
         <a href="mapas/control_extraccion.jpg" class="image-link">
           <img src="mapas/control_extraccion.jpg" alt="Mapa Control y extracción del agua en la Cuenca">
           <div class="carousel-caption d-none d-md-block" style="color: black;">
@@ -102,7 +91,7 @@
         </a>
       </div>
 
-      <div class="item">
+      <div class="carousel-item">
         <a href="mapas/mapa_pozos.jpg" class="image-link">
           <img src="mapas/mapa_pozos.jpg" alt="Importación del agua a la Cuenca"> 
           <div class="carousel-caption d-none d-md-block" style="color: black;">
@@ -111,7 +100,7 @@
         </a>
       </div>
 
-      <div class="item">
+      <div class="carousel-item">
         <a href="mapas/riesgo_geologico.jpg" class="image-link">
           <img src="mapas/riesgo_geologico.jpg" alt="Mapa de Riesgo Geológico"> 
           <div class="carousel-caption d-none d-md-block" style="color: black;">
@@ -121,16 +110,20 @@
       </div>
     </div>
 
-    <a class="left carousel-control" href="#theCarousel" role="button" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <a class="carousel-control-prev" href="#theCarousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="sr-only">anterior</span>
     </a>
-    <a class="right carousel-control" href="#theCarousel" role="button" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <a class="carousel-control-next" href="#theCarousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="sr-only">siguiente</span>
     </a>
   </div>
 </div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
 <script>
   $(document).ready(function() {
     $('.image-link').magnificPopup({
@@ -141,5 +134,7 @@
     });
   });
 </script>
+<script src="gallery.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
