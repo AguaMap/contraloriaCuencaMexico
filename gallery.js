@@ -18,11 +18,15 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   const galleries = {
-    'gallery-page1': [
-      'path/to/image1.jpg',
-      'path/to/image2.jpg',
-      'path/to/image3.jpg',
-      'path/to/image4.jpg'
+    'texcoco.html': [
+      'NodoTexcoco/NODOTEXCOCO001.jpg',
+      'NodoTexcoco/NODOTEXCOCO002.jpg',
+      'NodoTexcoco/NODOTEXCOCO003.jpg',
+      'NodoTexcoco/NODOTEXCOCO004.jpg',
+      'NodoTexcoco/NODOTEXCOCO005.jpg',
+      'NodoTexcoco/NODOTEXCOCO006.jpg',
+      'NodoTexcoco/NODOTEXCOCO007.jpg',
+      'NodoTexcoco/NODOTEXCOCO008.jpg'
     ],
     'gallery-page2': [
       'path/to/another-image1.jpg',
