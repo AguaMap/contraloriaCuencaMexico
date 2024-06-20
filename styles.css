@@ -7,18 +7,6 @@
   box-sizing: border-box;
 }
 
-.titulo-nodo {
-  background-color: rgba(0, 0, 0, 0.7);
-  color: white;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 700;
-  font-size: 1.5em;
-  text-align: center;
-  padding: 10px 20px;
-  border-radius: 10px;
-  margin-top: 20px;
-}
-
 body {
   margin: 0;
   min-height: 100vh;
@@ -41,6 +29,9 @@ body {
 }
 
 #header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin: auto;
   width: 90%;
   max-width: 1200px;
@@ -53,10 +44,13 @@ body {
 
 ul, ol {
   list-style: none;
+  display: flex;
+  justify-content: center;
+  flex: 1;
 }
 
 .nav > li {
-  float: left;
+  position: relative;
 }
 
 .nav li a {
@@ -79,6 +73,7 @@ ul, ol {
   min-width: 140px;
   background-color: rgba(0, 0, 0, 0.9);
   z-index: 1000; /* Asegura que el submenú esté encima de otros elementos */
+  left: 0;
 }
 
 .nav li:hover > ul {
@@ -92,6 +87,16 @@ ul, ol {
 .nav li ul li ul {
   right: -140px;
   top: 0px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icons a img {
+  width: 30px;
+  height: 30px;
 }
 
 .contenido {
@@ -255,4 +260,16 @@ figure {
   .gallery-container {
     padding: 0 5px;
   }
+}
+
+.titulo-nodo {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 1.5em;
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-top: 20px;
 }
