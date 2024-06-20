@@ -126,7 +126,7 @@ ul, ol {
   height: auto;
 }
 
-.conten_acerca, .conten_info {
+.conten_info {
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   width: 80%;
@@ -287,8 +287,20 @@ figure {
   text-align: center;
   padding: 10px 20px;
   border-radius: 10px;
-  margin: 20px 0; /* Espacio alrededor del bloque de texto */
+  margin-top: 20px;
+  margin-bottom: 10px; /* Reducir el margen inferior */
   width: 100%;
   max-width: 1200px; /* Alineación con el menú */
   box-sizing: border-box;
 }
+
+.conten_acerca {
+  margin-top: 10px; /* Reducir el margen superior */
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  width: 80%;
+  max-width: 800px;
+  padding: 10px;
+  text-align: center;
+}
+
