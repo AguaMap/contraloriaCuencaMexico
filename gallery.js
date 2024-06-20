@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // Iniciar autoplay con un intervalo de 3 segundos.
-  startAutoplay(3000);
+  startAutoplay(6000);
 
   // Opcional: Detener autoplay cuando el usuario interactúa con los botones de navegación.
   document.querySelectorAll('.nav-button').forEach(button => {
