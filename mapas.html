@@ -8,10 +8,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
     <link rel="stylesheet" href="styles.css">
     <style> 
-        .carousel-inner > .item > img,
-        .carousel-inner > .item > a > img {
-            width: 60%;
-            margin: auto;
+        .carousel-inner > .carousel-item > img {
+            width: 100%;
+            height: auto;
+            max-height: 500px;
+            object-fit: cover;
+        }
+        .carousel-caption h3 {
+            color: black;
+        }
+        .conten_acerca {
+            max-width: 800px;
+            margin: 0 auto;
         }
     </style>
 </head>
@@ -25,6 +33,7 @@
     <li><a href="acerca.html">Acerca de</a></li>
     <li><a href="#">Contralorías y Grupos Promotores</a>
       <ul>
+        <li><a href="centro.html">Nodo Centro</a></li>
         <li><a href="lerma.html">Nodo Lerma</a></li>
         <li><a href="texcoco.html">Nodo Texcoco</a></li>
         <li><a href="tlahuac.html">Nodo Tlahuac</a></li>
@@ -33,12 +42,13 @@
         <li><a href="zumpango.html">Nodo Zumpango</a></li>
       </ul>
     </li>
-    <li><a href="">Biblioteca</a>
+    <li><a href="biblioteca.html">Biblioteca</a>
       <ul>
         <li><a href="#">Material de consulta</a></li>
         <li><a href="#">Memoria del proyecto</a></li>
-        <li><a href="mapas.html">Mapas</a></li>
-        <li><a href="videos.html">Videos</a></li>
+        <li><a href="#">Manual de estrategias jurídicas</a></li>
+        <li><a href="#">Diagnostico técnico</a></li>
+        <li><a href="#">Videos</a></li>
       </ul>
     </li>
     <li><a href="participa.html">¡Participa!</a>
@@ -74,8 +84,8 @@
       <div class="carousel-item active">
         <a href="mapas/agentes_contaminantes.jpg" class="image-link">
           <img src="mapas/agentes_contaminantes.jpg" alt="Mapa de agentes contaminantes en la Cuenca"> 
-          <div class="carousel-caption d-none d-md-block" style="color: black;">
-            <h3 style="color: black;">Mapa de agentes contaminantes en la Cuenca</h3>
+          <div class="carousel-caption d-none d-md-block">
+            <h3>Mapa de agentes contaminantes en la Cuenca</h3>
           </div>
         </a>
       </div>
@@ -83,8 +93,8 @@
       <div class="carousel-item">
         <a href="mapas/control_extraccion.jpg" class="image-link">
           <img src="mapas/control_extraccion.jpg" alt="Mapa Control y extracción del agua en la Cuenca">
-          <div class="carousel-caption d-none d-md-block" style="color: black;">
-            <h3 style="color: black;">Mapa Control y extracción del agua en la Cuenca</h3>
+          <div class="carousel-caption d-none d-md-block">
+            <h3>Mapa Control y extracción del agua en la Cuenca</h3>
           </div>
         </a>
       </div>
@@ -92,8 +102,8 @@
       <div class="carousel-item">
         <a href="mapas/mapa_pozos.jpg" class="image-link">
           <img src="mapas/mapa_pozos.jpg" alt="Importación del agua a la Cuenca"> 
-          <div class="carousel-caption d-none d-md-block" style="color: black;">
-            <h3 style="color: black;">Importación del agua a la Cuenca</h3>
+          <div class="carousel-caption d-none d-md-block">
+            <h3>Importación del agua a la Cuenca</h3>
           </div>
         </a>
       </div>
@@ -101,8 +111,8 @@
       <div class="carousel-item">
         <a href="mapas/riesgo_geologico.jpg" class="image-link">
           <img src="mapas/riesgo_geologico.jpg" alt="Mapa de Riesgo Geológico"> 
-          <div class="carousel-caption d-none d-md-block" style="color: black;">
-            <h3 style="color: black;">Mapa de Riesgo Geológico</h3>
+          <div class="carousel-caption d-none d-md-block">
+            <h3>Mapa de Riesgo Geológico</h3>
           </div>
         </a>
       </div>
@@ -128,6 +138,13 @@
       type: 'image',
       gallery: {
         enabled: true
+      },
+      zoom: {
+        enabled: true,
+        duration: 300,
+        opener: function(element) {
+          return element.find('img');
+        }
       }
     });
   });
