@@ -34,38 +34,48 @@ document.addEventListener('DOMContentLoaded', function () {
     ],
 
      'carousel-centro': [
-      'NodoLerma/NODOLERMA001.jpg',
-      'NodoLerma/NODOLERMA002.jpg',
-      'NodoLerma/NODOLERMA003.jpg',
-      'NodoLerma/NODOLERMA004.jpg'
+      'NodoCentro/NODOCENTRO01.jpg',
+      'NodoCentro/NODOCENTRO02.jpg',
+      'NodoCentro/NODOCENTRO03.jpg',
+      'NodoCentro/NODOCENTRO04.jpg',
+      'NodoCentro/NODOCENTRO05.png',
+      'NodoCentro/NODOCENTRO06.png',
+      'NodoCentro/NODOCENTRO07.png',
+      'NodoCentro/NODOCENTRO08.png'
     ],
 
      'carousel-tlahuac': [
-      'NodoLerma/NODOLERMA001.jpg',
-      'NodoLerma/NODOLERMA002.jpg',
-      'NodoLerma/NODOLERMA003.jpg',
-      'NodoLerma/NODOLERMA004.jpg'
+      'NodoTlahuac/NODOTHAHUAC-XICO001.jpg',
+      'NodoTlahuac/NODOTHAHUAC-XICO002.jpg',
+      'NodoTlahuac/NODOTHAHUAC-XICO003.jpg',
+      'NodoTlahuac/NODOTHAHUAC-XICO004.jpg'
     ],
 
      'carousel-tula': [
-      'NodoLerma/NODOLERMA001.jpg',
-      'NodoLerma/NODOLERMA002.jpg',
-      'NodoLerma/NODOLERMA003.jpg',
-      'NodoLerma/NODOLERMA004.jpg'
+      'NodoTula/NODO_TULA01.jpg',
+      'NodoTula/NODO_TULA02.jpg',
+      'NodoTula/NODO_TULA03.jpg',
+      'NodoTula/NODO_TULA04.jpg',
+      'NodoTula/NODO_TULA05.jpg',
+      'NodoTula/NODO_TULA06.jpg'
     ],
 
      'carousel-xochimilco': [
-      'NodoLerma/NODOLERMA001.jpg',
-      'NodoLerma/NODOLERMA002.jpg',
-      'NodoLerma/NODOLERMA003.jpg',
-      'NodoLerma/NODOLERMA004.jpg'
+      'NodoXochimilco/NODOXOCHIMILCO001.jpg',
+      'NodoXochimilco/NODOXOCHIMILCO002.jpg',
+      'NodoXochimilco/NODOXOCHIMILCO003.jpg',
+      'NodoXochimilco/NODOXOCHIMILCO004.jpg',
+      'NodoXochimilco/NODOXOCHIMILCO005.jpg',
+      'NodoXochimilco/NODOXOCHIMILCO006.jpg',
+      'NodoXochimilco/NODOXOCHIMILCO007.jpg'
     ],
 
      'carousel-zumpango': [
-      'NodoLerma/NODOLERMA001.jpg',
-      'NodoLerma/NODOLERMA002.jpg',
-      'NodoLerma/NODOLERMA003.jpg',
-      'NodoLerma/NODOLERMA004.jpg'
+      'NodoZumpango/NODOZUMPANGO001.jpg',
+      'NodoZumpango/NODOZUMPANGO002.jpg',
+      'NodoZumpango/NODOZUMPANGO003.jpg',
+      'NodoZumpango/NODOZUMPANGO004.jpg',
+      'NodoZumpango/NODOZUMPANGO005.jpg'
     ]
   };
 
