@@ -31,6 +31,41 @@ document.addEventListener('DOMContentLoaded', function () {
       'NodoLerma/NODOLERMA002.jpg',
       'NodoLerma/NODOLERMA003.jpg',
       'NodoLerma/NODOLERMA004.jpg'
+    ],
+
+     'carousel-centro': [
+      'NodoLerma/NODOLERMA001.jpg',
+      'NodoLerma/NODOLERMA002.jpg',
+      'NodoLerma/NODOLERMA003.jpg',
+      'NodoLerma/NODOLERMA004.jpg'
+    ],
+
+     'carousel-tlahuac': [
+      'NodoLerma/NODOLERMA001.jpg',
+      'NodoLerma/NODOLERMA002.jpg',
+      'NodoLerma/NODOLERMA003.jpg',
+      'NodoLerma/NODOLERMA004.jpg'
+    ],
+
+     'carousel-tula': [
+      'NodoLerma/NODOLERMA001.jpg',
+      'NodoLerma/NODOLERMA002.jpg',
+      'NodoLerma/NODOLERMA003.jpg',
+      'NodoLerma/NODOLERMA004.jpg'
+    ],
+
+     'carousel-xochimilco': [
+      'NodoLerma/NODOLERMA001.jpg',
+      'NodoLerma/NODOLERMA002.jpg',
+      'NodoLerma/NODOLERMA003.jpg',
+      'NodoLerma/NODOLERMA004.jpg'
+    ],
+
+     'carousel-zumpango': [
+      'NodoLerma/NODOLERMA001.jpg',
+      'NodoLerma/NODOLERMA002.jpg',
+      'NodoLerma/NODOLERMA003.jpg',
+      'NodoLerma/NODOLERMA004.jpg'
     ]
   };
 
