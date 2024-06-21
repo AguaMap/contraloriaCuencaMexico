@@ -54,6 +54,12 @@
             text-decoration: none;
             cursor: pointer;
         }
+        .carousel-item-title {
+            text-align: center;
+            font-size: 16px;
+            color: #333;
+            margin-top: 5px;
+        }
     </style>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="gallery.js"></script>
@@ -85,7 +91,7 @@
         <li><a href="videos.html">Vídeos</a></li>
       </ul>
     </li>
-    <li><a href="">¡Participa!</a>
+    <li><a href="participa.html">¡Participa!</a>
       <ul>
         <li><a href="#">¿Cómo participar?</a></li>
         <li><a href="#">Opciones de participación</a></li>
@@ -99,13 +105,38 @@
        <a href="mailto:contraloria.ciudadana.agua@gmail.com"><img src="iconos/correo.png" alt="Correo"></a>
     </div>
 </div>
-<br><br>    
+    
 <div class="titulo-nodo">Mapas</div>
 <br><br>
 <div class="conten_acerca">
     <section id="gallery">
-        <div class="gallery-container" id="carousel-mapas">
-            <!-- Las imágenes del carrusel serán insertadas aquí por el script -->
+        <div class="gallery-container" id="carousel-mapas" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active">
+                    <img src="mapas/agentes_contaminantes.jpg" alt="Mapa de agentes contaminantes en la Cuenca">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3 style="color: black;">Mapa de agentes contaminantes en la Cuenca</h3>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="mapas/control_extraccion.jpg" alt="Mapa Control y extracción del agua en la Cuenca">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3 style="color: black;">Mapa Control y extracción del agua en la Cuenca</h3>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="mapas/mapa_pozos.jpg" alt="Importación del agua a la Cuenca">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3 style="color: black;">Importación del agua a la Cuenca</h3>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="mapas/riesgo_geologico.jpg" alt="Mapa de Riesgo Geológico">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3 style="color: black;">Mapa de Riesgo Geológico</h3>
+                    </div>
+                </div>
+            </div>
         </div>
         <nav class="gallery-navigation">
             <button class="nav-button prev-button"><span>&#60;</span></button>
