@@ -12,11 +12,13 @@
         .doc-container {
             text-align: center;
             display: inline-block;
-            margin: 10px;
+            margin: 20px;
+            vertical-align: top;
         }
         .doc-thumbnail {
             width: 200px;
-            height: auto;
+            height: 280px; /* Ajustar altura para que todas las imágenes tengan la misma altura */
+            object-fit: cover;
             cursor: pointer;
         }
         .doc-title {
@@ -25,6 +27,7 @@
             text-align: center;
             margin-top: 10px;
             max-width: 200px;
+            line-height: 1.2; /* Para ajustar el interlineado del texto */
         }
         /* Estilos para el modal de documento */
         .modal {
