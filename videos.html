@@ -12,6 +12,7 @@
             height: auto;
             cursor: pointer;
             margin: 10px;
+            display: inline-block;
         }
         .modal {
             display: none;
@@ -94,8 +95,8 @@
 <div class="titulo-nodo">Mapas</div>
     
 <div class="conten_acerca">
-  <video src="videos/video_1.mp4" class="video-thumbnail" data-video="https://drive.google.com/file/d/1kUo2KwMWGMBxqaFmZQihTCkoatzAAs5K/preview" alt="Video 1" controls></video>
-  <video src="videos/video_2.mp4" class="video-thumbnail" data-video="https://drive.google.com/file/d/10Bpn0ff9TswSVcGBuyvcntYvlIh5Qzz_/preview" alt="Video 2" controls></video>
+  <video src="videos/video_1.mp4" class="video-thumbnail" data-video="https://drive.google.com/file/d/1kUo2KwMWGMBxqaFmZQihTCkoatzAAs5K/preview" alt="Video 1" autoplay loop muted></video>
+  <video src="videos/video_2.mp4" class="video-thumbnail" data-video="https://drive.google.com/file/d/10Bpn0ff9TswSVcGBuyvcntYvlIh5Qzz_/preview" alt="Video 2" autoplay loop muted></video>
 </div>
 
 <!-- El Modal de Video -->
@@ -125,6 +126,14 @@
     span.onclick = function() {
         modal.style.display = "none";
         videoFrame.src = ""; // Stop the video
+    };
+
+    // Close the modal when the user clicks outside of the modal content
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+            videoFrame.src = ""; // Stop the video
+        }
     };
   });
 </script>
