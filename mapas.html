@@ -5,11 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contralorías del Agua</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+    <link rel="stylesheet" href="styles.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
     <script src="gallery.js"></script>
     <script src="script.js"></script>
+    <style>
+        .carousel-inner > .carousel-item > img {
+            width: 100%;
+            height: auto;
+            max-height: 500px;
+            object-fit: cover;
+        }
+        .carousel-caption h3 {
+            color: black;
+        }
+        .conten_acerca {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+    </style>
 </head>
 <body>
 <div class="encabezado">
@@ -33,11 +50,11 @@
       <ul>
         <li><a href="#">Material de consulta</a></li>
         <li><a href="#">Memoria del proyecto</a></li>
-        <li><a href="#">Mapas</a></li>
-        <li><a href="#">Vídeos</a></li>
+        <li><a href="mapas.html">Mapas</a></li>
+        <li><a href="videos.html">Vídeos</a></li>
       </ul>
     </li>
-    <li><a href="participa.html">¡Participa!</a>
+    <li><a href="">¡Participa!</a>
       <ul>
         <li><a href="#">¿Cómo participar?</a></li>
         <li><a href="#">Opciones de participación</a></li>
@@ -45,12 +62,12 @@
       </ul>
     </li>
   </ul>
-    <div class="social-icons">
-       <a href="https://www.instagram.com"><img src="iconos/insta.png" alt="Instagram"></a>
-       <a href="https://www.facebook.com"><img src="iconos/face.png" alt="Facebook"></a>
-       <a href="https://www.twitter.com"><img src="iconos/x.png" alt="Twitter"></a>
-       <a href="mailto:contact@example.com"><img src="iconos/correo.png" alt="Correo"></a>
-    </div>
+  <div class="social-icons">
+    <a href="https://www.instagram.com"><img src="iconos/insta.png" alt="Instagram"></a>
+    <a href="https://www.facebook.com"><img src="iconos/face.png" alt="Facebook"></a>
+    <a href="https://www.twitter.com"><img src="iconos/x.png" alt="Twitter"></a>
+    <a href="mailto:contact@example.com"><img src="iconos/correo.png" alt="Correo"></a>
+  </div>
 </div>
 <div class="titulo-nodo">Mapas</div>
     
@@ -66,5 +83,22 @@
     </section>
 </div>
 
+<script>
+  $(document).ready(function() {
+    $('#carousel-mapas .carousel-item a').magnificPopup({
+      type: 'image',
+      gallery: {
+        enabled: true
+      },
+      zoom: {
+        enabled: true,
+        duration: 300,
+        opener: function(element) {
+          return element.find('img');
+        }
+      }
+    });
+  });
+</script>
 </body>
 </html>
