@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contralorías del Agua</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .doc-thumbnail {
+            width: 200px;
+            height: auto;
+            cursor: pointer;
+            margin: 10px;
+            display: inline-block;
+        }
+        .doc-title {
+            font-size: 16px;
+            color: #333;
+            text-align: center;
+            margin-top: 5px;
+        }
+        /* Estilos para el modal de documento */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.9);
+        }
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        $(document).ready(function() {
+            // Obtener el modal
+            var modal = document.getElementById("docModal");
+
+            // Obtener el iframe y configurar su fuente cuando se haga clic en una miniatura
+            var docFrame = document.getElementById("docFrame");
+            $('.doc-thumbnail').click(function() {
+                modal.style.display = "block";
+                docFrame.src = $(this).data('doc');
+            });
+
+            // Obtener el <span> elemento que cierra el modal
+            var span = document.getElementsByClassName("close")[0];
+
+            // Cuando el usuario haga clic en <span> (x), cerrar el modal
+            span.onclick = function() {
+                modal.style.display = "none";
+                docFrame.src = ""; // Detener el documento
+            };
+
+            // Cerrar el modal cuando el usuario haga clic fuera del contenido del modal
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                    docFrame.src = ""; // Detener el documento
+                }
+            };
+        });
+    </script>
+</head>
+<body>
+<div class="encabezado">
+  <h1>Contralorías de la Cuenca de México</h1>
+</div>
+<div id="header">
+  <ul class="nav">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="acerca.html">Acerca de</a></li>
+    <li><a href="">Contralorías y Grupos Promotores</a>
+      <ul>
+        <li><a href="lerma.html">Nodo Lerma</a></li>
+        <li><a href="texcoco.html">Nodo Texcoco</a></li>
+        <li><a href="tlahuac.html">Nodo Tlahuac</a></li>
+        <li><a href="tula.html">Nodo Tula</a></li>
+        <li><a href="xochimilco.html">Nodo Xochimilco</a></li>
+        <li><a href="zumpango.html">Nodo Zumpango</a></li>
+      </ul>
+    </li>
+    <li><a href="">Biblioteca</a>
+      <ul>
+        <li><a href="material.html">Material de consulta</a></li>
+        <li><a href="#">Memoria del proyecto</a></li>
+        <li><a href="mapas.html">Mapas</a></li>
+        <li><a href="videos.html">Videos</a></li>
+      </ul>
+    </li>
+    <li><a href="">¡Participa!</a>
+      <ul>
+        <li><a href="#">¿Cómo participar?</a></li>
+        <li><a href="#">Opciones de participación</a></li>
+        <li><a href="#">Eventos</a></li>
+      </ul>
+    </li>
+  </ul>
+    <div class="social-icons">
+       <a href="https://www.instagram.com/agua.contraloria.cuenca/?igsh=MWgzOXhzOWJqaWxrOA%3D%3D" target="_blank"><img src="iconos/insta.png" alt="Instagram"></a>
+       <a href="https://www.facebook.com/agua.cuenca.contraloria" target="_blank"><img src="iconos/face.png" alt="Facebook"></a>
+       <a href="mailto:contraloria.ciudadana.agua@gmail.com"><img src="iconos/correo.png" alt="Correo"></a>
+    </div>
+</div>
+
+<div class="titulo-nodo">Material de consulta</div>
+<br><br>
+<div class="conten_acerca">
+    <div class="doc-container">
+        <img src="materiales/analizando_debilidades.png" class="doc-thumbnail" data-doc="materiales/analizando_debilidades.pdf" alt="analizando_debilidades">
+        <div class="doc-title">Analizando Debilidades</div>
+    </div>
+    <div class="doc-container">
+        <img src="materiales/identificando_vulnerabilidades.png" class="doc-thumbnail" data-doc="materiales/identificando_vulnerabilidades.pdf" alt="identificando_vulnerabilidades">
+        <div class="doc-title">Identificando Vulnerabilidades</div>
+    </div>
+    <div class="doc-container">
+        <img src="materiales/manual_PROTEGERNOS.png" class="doc-thumbnail" data-doc="materiales/Manual_PROTEGERNOS.pdf" alt="manual_PROTEGERNOS">
+        <div class="doc-title">Manual PROTEGERNOS</div>
+    </div>
+</div>
+
+<!-- El Modal de Documento -->
+<div id="docModal" class="modal">
+  <span class="close">&times;</span>
+  <div class="modal-content">
+    <iframe id="docFrame" width="100%" height="600px" frameborder="0" allowfullscreen></iframe>
+  </div>
+</div>
+</body>
+</html>
