@@ -9,6 +9,23 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        #map {
+            height: 600px;
+        }
+        #add-marker-btn {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 1000;
+            background-color: white;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
 <div class="encabezado">
@@ -50,13 +67,12 @@
     </div>
 </div>
 <div class="contenido">
-    <img src="imagenes/info1.jpg" alt="Info 1" class="img-fluid">
+    <div id="map"></div>
+    <button id="add-marker-btn">Add Marker</button>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="mapa_interactivo.js"></script>
 </div>
-<div class="contenido">
-    <img src="imagenes/info2.jpg" alt="Info 1" class="img-fluid">
-</div>
-<div class="contenido">
-  <iframe src="https://drive.google.com/file/d/1CLhnGsT8jSyi2F9NtDL3J26m08bQDq7w/preview" width="640" height="480" allow="autoplay"></iframe>
-</div>
+
 </body>
 </html>
