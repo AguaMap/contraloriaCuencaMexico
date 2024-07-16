@@ -332,3 +332,13 @@ figure {
     width: calc(100% - 20px);
 }
 
+.leaflet-control-attribution {
+    background: url('imagenes/mexico.png') no-repeat left center;
+    background-size: 20px 13px; /* Ajusta el tamaño según sea necesario */
+    padding-left: 25px; /* Añade espacio para la imagen */
+}
+
+.leaflet-control-attribution a {
+    color: #0078A8; /* Color del enlace, si deseas cambiarlo */
+}
+
