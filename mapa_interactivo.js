@@ -1,10 +1,32 @@
 // Inicializar el mapa centrado en la Ciudad de México con el zoom adecuado
 var map = L.map('map').setView([19.4326, -99.1332], 10);
 
-// Agregar la capa de mapa base
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+// Agregar la capa de mapa base de OpenStreetMap
+var osmLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map);
+});
+
+// Agregar la capa de Google Maps
+var googleMapsLayer = L.gridLayer.googleMutant({
+    type: 'roadmap' // Puede ser 'roadmap', 'satellite', 'terrain' o 'hybrid'
+});
+
+// Agregar la capa de Google Satellite
+var googleSatelliteLayer = L.gridLayer.googleMutant({
+    type: 'satellite'
+});
+
+// Añadir la capa OSM por defecto
+osmLayer.addTo(map);
+
+// Control de capas
+var baseLayers = {
+    "OpenStreetMap": osmLayer,
+    "Google Maps": googleMapsLayer,
+    "Google Satellite": googleSatelliteLayer
+};
+
+L.control.layers(baseLayers).addTo(map);
 
 // Variable para almacenar el estado de agregar marcador
 var addingMarker = false;
@@ -60,7 +82,7 @@ window.saveDetails = function(button, markerId) {
     var detailsContent = `<p><b>Comentario:</b> ${comment}</p>`;
     if (photo) {
         var photoUrl = URL.createObjectURL(photo);
-        detailsContent += `<p><b>Foto:</b> <img src="${photoUrl}" alt="Foto" width="100"></p>`;
+        detailsContent += `<p><b>Foto:</b> <a href="${photoUrl}" target="_blank"><img src="${photoUrl}" alt="Foto" width="100"></a></p>`;
     }
     if (video) {
         var videoUrl = URL.createObjectURL(video);
@@ -71,6 +93,9 @@ window.saveDetails = function(button, markerId) {
     var marker = map._layers[markerId];
     marker.bindPopup(detailsContent).openPopup();
     marker.dragging.disable(); // Desactivar el arrastre del marcador después de guardar los detalles
+
+    // Guardar los detalles del marcador en localStorage
+    saveMarkerToLocalStorage(markerId, marker.getLatLng(), detailsContent);
 };
 
 // Función para agregar un comentario al marcador
@@ -114,7 +139,32 @@ window.saveComment = function(button, markerId) {
     updatedContent += `<button onclick="addComment(${markerId})">Agregar comentario</button>`;
 
     marker.bindPopup(updatedContent).openPopup();
+
+    // Actualizar los detalles del marcador en localStorage
+    saveMarkerToLocalStorage(markerId, marker.getLatLng(), updatedContent);
 };
+
+// Guardar detalles del marcador en localStorage
+function saveMarkerToLocalStorage(markerId, latlng, content) {
+    var markers = JSON.parse(localStorage.getItem('markers')) || {};
+    markers[markerId] = { latlng: latlng, content: content };
+    localStorage.setItem('markers', JSON.stringify(markers));
+}
+
+// Cargar marcadores desde localStorage
+function loadMarkersFromLocalStorage() {
+    var markers = JSON.parse(localStorage.getItem('markers')) || {};
+    for (var markerId in markers) {
+        if (markers.hasOwnProperty(markerId)) {
+            var markerData = markers[markerId];
+            var marker = L.marker([markerData.latlng.lat, markerData.latlng.lng], { draggable: false }).addTo(map);
+            marker.bindPopup(markerData.content);
+        }
+    }
+}
 
 // Evento del botón para activar o desactivar el modo de agregar marcador
 document.getElementById('add-marker-btn').addEventListener('click', toggleAddMarker);
+
+// Cargar los marcadores cuando se carga la página
+window.onload = loadMarkersFromLocalStorage;
