@@ -309,7 +309,7 @@ figure {
     text-align: center;
     margin-top: 10px;
 }
-#add-marker-btn {
+#add-marker-btn, .popup-button {
     background-color: #D2B48C; /* Café claro */
     color: #8B4513; /* Café oscuro */
     padding: 10px 20px;
@@ -317,5 +317,18 @@ figure {
     border: 1px solid #8B4513;
     cursor: pointer;
     font-size: 16px;
+}
+.notice {
+    text-align: center;
+    font-size: 12px;
+    color: #FFFFFF; /* Blanco */
+    margin-top: 10px;
+}
+.popup-content {
+    text-align: left;
+}
+.popup-content input[type="text"], .popup-content input[type="file"] {
+    margin-bottom: 10px;
+    width: calc(100% - 20px);
 }
 
