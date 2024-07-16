@@ -30,10 +30,10 @@ function onMapClick(e) {
             <h3>Agregar detalles</h3>
             <label for="comment">Comentario:</label><br>
             <input type="text" id="comment" name="comment"><br>
-            <label for="photo">URL Foto:</label><br>
-            <input type="text" id="photo" name="photo"><br>
-            <label for="video">URL Vídeo:</label><br>
-            <input type="text" id="video" name="video"><br>
+            <label for="photo">Foto:</label><br>
+            <input type="file" id="photo" name="photo" accept="image/*"><br>
+            <label for="video">Vídeo:</label><br>
+            <input type="file" id="video" name="video" accept="video/*"><br>
             <button onclick="saveDetails(this, ${marker._leaflet_id})">Guardar</button>
         </div>
     `;
@@ -45,12 +45,27 @@ function onMapClick(e) {
 // Función para guardar detalles del marcador
 window.saveDetails = function(button, markerId) {
     var comment = button.parentNode.querySelector('#comment').value;
-    var photo = button.parentNode.querySelector('#photo').value;
-    var video = button.parentNode.querySelector('#video').value;
+    var photo = button.parentNode.querySelector('#photo').files[0];
+    var video = button.parentNode.querySelector('#video').files[0];
+
+    if (photo && photo.size > 20 * 1024 * 1024) {
+        alert("La foto no puede ser mayor a 20 MB.");
+        return;
+    }
+    if (video && video.size > 20 * 1024 * 1024) {
+        alert("El video no puede ser mayor a 20 MB.");
+        return;
+    }
 
     var detailsContent = `<p><b>Comentario:</b> ${comment}</p>`;
-    if (photo) detailsContent += `<p><b>Photo:</b> <img src="${photo}" alt="Photo" width="100"></p>`;
-    if (video) detailsContent += `<p><b>Video:</b> <a href="${video}" target="_blank">Watch Video</a></p>`;
+    if (photo) {
+        var photoUrl = URL.createObjectURL(photo);
+        detailsContent += `<p><b>Foto:</b> <img src="${photoUrl}" alt="Foto" width="100"></p>`;
+    }
+    if (video) {
+        var videoUrl = URL.createObjectURL(video);
+        detailsContent += `<p><b>Vídeo:</b> <a href="${videoUrl}" target="_blank">Ver Vídeo</a></p>`;
+    }
     detailsContent += `<button onclick="addComment(${markerId})">Agregar comentario</button>`;
 
     var marker = map._layers[markerId];
@@ -103,4 +118,3 @@ window.saveComment = function(button, markerId) {
 
 // Evento del botón para activar o desactivar el modo de agregar marcador
 document.getElementById('add-marker-btn').addEventListener('click', toggleAddMarker);
-
