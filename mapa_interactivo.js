@@ -1,5 +1,5 @@
-// Inicializar el mapa
-var map = L.map('map').setView([51.505, -0.09], 13);
+// Inicializar el mapa centrado en la Ciudad de México con el zoom adecuado
+var map = L.map('map').setView([19.4326, -99.1332], 10);
 
 // Agregar la capa de mapa base
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -103,3 +103,4 @@ window.saveComment = function(button, markerId) {
 
 // Evento del botón para activar o desactivar el modo de agregar marcador
 document.getElementById('add-marker-btn').addEventListener('click', toggleAddMarker);
+
