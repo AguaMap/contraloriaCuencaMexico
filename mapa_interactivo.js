@@ -2,19 +2,13 @@
 var map = L.map('map').setView([19.4326, -99.1332], 10);
 
 // Agregar la capa de mapa base de OpenStreetMap
-var osmLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-});
+var osmLayer = L.tileLayer.provider('OpenStreetMap.Mapnik');
 
 // Agregar la capa de Google Maps
-var googleMapsLayer = L.gridLayer.googleMutant({
-    type: 'roadmap' // Puede ser 'roadmap', 'satellite', 'terrain' o 'hybrid'
-});
+var googleMapsLayer = L.tileLayer.provider('GoogleMaps');
 
 // Agregar la capa de Google Satellite
-var googleSatelliteLayer = L.gridLayer.googleMutant({
-    type: 'satellite'
-});
+var googleSatelliteLayer = L.tileLayer.provider('GoogleSatellite');
 
 // Añadir la capa OSM por defecto
 osmLayer.addTo(map);
