@@ -48,7 +48,7 @@ function onMapClick(e) {
     var marker = L.marker([e.latlng.lat, e.latlng.lng], { draggable: true }).addTo(map);
 
     var popupContent = `
-        <div>
+        <div class="popup-content">
             <h3>Agregar detalles</h3>
             <label for="comment">Comentario:</label><br>
             <input type="text" id="comment" name="comment"><br>
@@ -56,7 +56,7 @@ function onMapClick(e) {
             <input type="file" id="photo" name="photo" accept="image/*"><br>
             <label for="video">Vídeo:</label><br>
             <input type="file" id="video" name="video" accept="video/*"><br>
-            <button onclick="saveDetails(this, ${marker._leaflet_id})">Guardar</button>
+            <button class="popup-button" onclick="saveDetails(this, ${marker._leaflet_id})">Guardar</button>
         </div>
     `;
     marker.bindPopup(popupContent).openPopup();
@@ -88,7 +88,7 @@ window.saveDetails = function(button, markerId) {
         var videoUrl = URL.createObjectURL(video);
         detailsContent += `<p><b>Vídeo:</b> <a href="${videoUrl}" target="_blank">Ver Vídeo</a></p>`;
     }
-    detailsContent += `<button onclick="addComment(${markerId})">Agregar comentario</button>`;
+    detailsContent += `<button class="popup-button" onclick="addComment(${markerId})">Agregar comentario</button>`;
 
     var marker = map._layers[markerId];
     marker.bindPopup(detailsContent).openPopup();
@@ -107,11 +107,11 @@ window.addComment = function(markerId) {
     tempDiv.innerHTML = currentPopupContent;
 
     var addCommentPopupContent = `
-        <div>
+        <div class="popup-content">
             <h3>Agregar comentario</h3>
             <label for="new-comment">Nuevo comentario:</label><br>
             <input type="text" id="new-comment" name="new-comment"><br>
-            <button onclick="saveComment(this, ${markerId})">Guardar comentario</button>
+            <button class="popup-button" onclick="saveComment(this, ${markerId})">Guardar comentario</button>
         </div>
     `;
     marker.bindPopup(addCommentPopupContent).openPopup();
@@ -136,7 +136,7 @@ window.saveComment = function(button, markerId) {
     if (videoHTML) updatedContent += videoHTML;
     updatedContent += previousComments;
     updatedContent += `<p class="comment"><b>Comentario adicional:</b> ${newComment}</p>`;
-    updatedContent += `<button onclick="addComment(${markerId})">Agregar comentario</button>`;
+    updatedContent += `<button class="popup-button" onclick="addComment(${markerId})">Agregar comentario</button>`;
 
     marker.bindPopup(updatedContent).openPopup();
 
