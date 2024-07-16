@@ -304,3 +304,18 @@ figure {
   text-align: center;
 }
 
+
+.button-container {
+    text-align: center;
+    margin-top: 10px;
+}
+#add-marker-btn {
+    background-color: #D2B48C; /* Café claro */
+    color: #8B4513; /* Café oscuro */
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid #8B4513;
+    cursor: pointer;
+    font-size: 16px;
+}
+
