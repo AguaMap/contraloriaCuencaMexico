@@ -2,25 +2,12 @@
 var map = L.map('map').setView([19.4326, -99.1332], 10);
 
 // Agregar la capa de mapa base de OpenStreetMap
-var osmLayer = L.tileLayer.provider('OpenStreetMap.Mapnik');
-
-// Agregar la capa de Google Maps
-var googleMapsLayer = L.tileLayer.provider('GoogleMaps');
-
-// Agregar la capa de Google Satellite
-var googleSatelliteLayer = L.tileLayer.provider('GoogleSatellite');
+var osmLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+});
 
 // Añadir la capa OSM por defecto
 osmLayer.addTo(map);
-
-// Control de capas
-var baseLayers = {
-    "OpenStreetMap": osmLayer,
-    "Google Maps": googleMapsLayer,
-    "Google Satellite": googleSatelliteLayer
-};
-
-L.control.layers(baseLayers).addTo(map);
 
 // Variable para almacenar el estado de agregar marcador
 var addingMarker = false;
@@ -33,7 +20,7 @@ function toggleAddMarker() {
         document.getElementById('add-marker-btn').innerText = 'Haz click sobre el mapa para agregar un marcador';
     } else {
         map.off('click', onMapClick);
-        document.getElementById('add-marker-btn').innerText = 'Agregar comentario';
+        document.getElementById('add-marker-btn').innerText = 'Agregar marcador';
     }
 }
 
