@@ -14,16 +14,18 @@
         #map {
             height: 600px;
         }
+        .button-container {
+            text-align: center;
+            margin-top: 10px;
+        }
         #add-marker-btn {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            z-index: 1000;
-            background-color: white;
-            padding: 10px;
+            background-color: #D2B48C; /* Café claro */
+            color: #8B4513; /* Café oscuro */
+            padding: 10px 20px;
             border-radius: 5px;
-            border: 1px solid #ccc;
+            border: 1px solid #8B4513;
             cursor: pointer;
+            font-size: 16px;
         }
     </style>
 </head>
@@ -68,7 +70,9 @@
 </div>
 <div class="contenido">
     <div id="map"></div>
-    <button id="add-marker-btn">Add Marker</button>
+    <div class="button-container">
+        <button id="add-marker-btn">Add Marker</button>
+    </div>
 
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script src="mapa_interactivo.js"></script>
@@ -76,3 +80,4 @@
 
 </body>
 </html>
+
