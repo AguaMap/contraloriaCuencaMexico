@@ -14,7 +14,7 @@ function toggleAddMarker() {
     addingMarker = !addingMarker;
     if (addingMarker) {
         map.on('click', onMapClick);
-        document.getElementById('add-marker-btn').innerText = 'Click on the map to add marker';
+        document.getElementById('add-marker-btn').innerText = 'Haz click sobre el mapa para agregar un marcador';
     } else {
         map.off('click', onMapClick);
         document.getElementById('add-marker-btn').innerText = 'Agregar comentario';
