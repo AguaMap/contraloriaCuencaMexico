@@ -6,8 +6,10 @@
     <title>Contralorías del Agua</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="js/pdf.mjs"></script>
-    <script src="js/pdf.worker.mjs"></script>
+    <script type="module">
+        import * as pdfjsLib from './js/pdf.mjs';
+        pdfjsLib.GlobalWorkerOptions.workerSrc = './js/pdf.worker.mjs';
+    </script>
     <script src="js/turn.min.js"></script>
     <link rel="stylesheet" href="styles.css">
     <style>
@@ -76,13 +78,12 @@
             height: 100%;
         }
     </style>
-    <script>
-        $(document).ready(function() {
-            // Cargar y mostrar el PDF interactivo
+    <script type="module">
+        import * as pdfjsLib from './js/pdf.mjs';
+        import './js/turn.min.js';
+        
+        document.addEventListener("DOMContentLoaded", function() {
             const url = 'materiales/folleto_contralorias.pdf'; // Ruta a tu archivo PDF
-
-            // Inicializar PDF.js
-            pdfjsLib.GlobalWorkerOptions.workerSrc = 'js/pdf.worker.mjs';
 
             const loadingTask = pdfjsLib.getDocument(url);
             loadingTask.promise.then(pdf => {
