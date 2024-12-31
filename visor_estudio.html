@@ -25,6 +25,8 @@
         #mybook {
             width: 80%;
             height: calc(80% - 80px); /* Ajusta el tamaño del contenedor dejando espacio para el botón */
+
+        }
         #book1 {
             width: 100%;
             height: 90vh; /* Ajusta automáticamente al 90% de la altura de la pantalla */
@@ -44,18 +46,17 @@
         <a href="materiales" class="return-button"></a>
         <div class="return-text">Regresar a materiales</div>
     </div>
-            }
-
-            // Inicializar OneBook3D con las imágenes generadas
-            $('#mybook').onebook(src, {
-            $('#book1').onebook(src, {
-                startPage: 1,          // Página inicial
-                flip: 'soft',          // Animación de paso de página
-                skin: 'light',         // Tema
-                pageColor: 'white',    // Color de las páginas
-                border: 10             // Espaciado alrededor de las páginas
-            });
+    
+    // Inicializar OneBook3D con las imágenes generadas
+    $('#mybook').onebook(src, {
+    $('#book1').onebook(src, {
+         startPage: 1,          // Página inicial
+         flip: 'soft',          // Animación de paso de página
+         skin: 'light',         // Tema
+         pageColor: 'white',    // Color de las páginas
+         border: 10             // Espaciado alrededor de las páginas
         });
+    });
     </script>
 </body>
 </html>
