@@ -26,6 +26,14 @@ document.addEventListener('DOMContentLoaded', function () {
       'NodoTexcoco/NODOTEXCOCO008.jpg'
     ],
 
+    'carousel-inicio': [
+      'NodoZumpango/NODOZUMPANGO001.jpg',
+      'NodoZumpango/NODOZUMPANGO002.jpg',
+      'NodoZumpango/NODOZUMPANGO003.jpg',
+      'NodoZumpango/NODOZUMPANGO004.jpg',
+      'NodoZumpango/NODOZUMPANGO005.jpg'
+    ],
+
      'carousel-lerma': [
       'NodoLerma/NODOLERMA001.jpg',
       'NodoLerma/NODOLERMA002.jpg',
