@@ -27,11 +27,30 @@ document.addEventListener('DOMContentLoaded', function () {
     ],
 
     'carousel-inicio': [
-      'NodoZumpango/NODOZUMPANGO001.jpg',
-      'NodoZumpango/NODOZUMPANGO002.jpg',
-      'NodoZumpango/NODOZUMPANGO003.jpg',
-      'NodoZumpango/NODOZUMPANGO004.jpg',
-      'NodoZumpango/NODOZUMPANGO005.jpg'
+      'inicio/inicio001.jpg',
+      'inicio/inicio002.jpg',
+      'inicio/inicio003.jpg',
+      'inicio/inicio004.jpg',
+      'inicio/inicio005.jpg',
+      'inicio/inicio006.jpg',
+      'inicio/inicio007.jpg',
+      'inicio/inicio008.jpg',
+      'inicio/inicio009.jpg',
+      'inicio/inicio010.jpg',
+      'inicio/inicio011.jpg',
+      'inicio/inicio012.jpg',
+      'inicio/inicio013.jpg',
+      'inicio/inicio014.jpg',
+      'inicio/inicio015.jpg',
+      'inicio/inicio016.jpg',
+      'inicio/inicio017.jpg',
+      'inicio/inicio018.jpg',
+      'inicio/inicio019.jpg',
+      'inicio/inicio020.jpg',
+      'inicio/inicio021.jpg',
+      'inicio/inicio022.jpg',
+      'inicio/inicio023.jpg',
+      'inicio/inicio024.jpg'
     ],
 
      'carousel-lerma': [
