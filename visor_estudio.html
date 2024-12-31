@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudio analizando debilidades</title>
     <title>Visor PDF OneBook3D</title>
 
     <!-- Incluir librerías -->
@@ -11,18 +12,20 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/yourrepo/js/jquery.onebook3d-2.33.js"></script>
 
+    <script src="./js/js/jquery-1.11.0.min.js"></script>
+    <script src="./js/js/jquery.mousewheel.min.js"></script>
+    <script src="./js/js/three.min.js"></script>
+    <script src="./js/js/jquery.onebook3d-2.33.js"></script>
     <style>
         html, body {
             margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            background: none;
-            display: flex;
-            flex-direction: column;
+@@ -28,9 +23,10 @@
             justify-content: flex-start;
             align-items: center;
         }
+        #mybook {
+            width: 80%;
+            height: calc(80% - 80px); /* Ajusta el tamaño del contenedor dejando espacio para el botón */
         #book1 {
             width: 100%;
             height: 90vh; /* Ajusta automáticamente al 90% de la altura de la pantalla */
@@ -30,50 +33,25 @@
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
             overflow: hidden;
         }
-        .return-container {
-            position: absolute;
-            bottom: 20px;
-            left: 20px;
-            display: flex;
-            align-items: center;
-        }
-        .return-button {
-            width: 50px;
-            height: 50px;
-            background-image: url('./imagenes/retorno.jpg');
-            background-size: cover;
-            background-position: center;
-            margin-right: 10px;
-            cursor: pointer;
-        }
-        .return-text {
-            font-size: 16px;
-            color: #000;
-        }
-    </style>
+@@ -58,11 +54,11 @@
 </head>
 <body>
     <!-- Contenedor para el visor -->
+    <div id="mybook"></div>
     <div id="book1" onebook3d="OneBook3d_933015_">&nbsp;</div>
 
     <!-- Botón para regresar a materiales -->
     <div class="return-container">
+        <a href="material.html" class="return-button"></a>
         <a href="materiales" class="return-button"></a>
         <div class="return-text">Regresar a materiales</div>
     </div>
 
-    <script>
-        $(function() {
-            // Array con las imágenes
-            const src = [];
-            const totalPages = 82; // Número total de páginas
-
-            for (let i = 1; i <= totalPages; i++) {
-                const pageNumber = i.toString().padStart(2, '0');
-                src.push(`pdf_estudio/foto${pageNumber}.jpg`); // Cambiado para coincidir con "estudio_XX.jpg"
+@@ -78,14 +74,14 @@
             }
 
             // Inicializar OneBook3D con las imágenes generadas
+            $('#mybook').onebook(src, {
             $('#book1').onebook(src, {
                 startPage: 1,          // Página inicial
                 flip: 'soft',          // Animación de paso de página
