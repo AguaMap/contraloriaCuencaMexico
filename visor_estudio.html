@@ -3,18 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estudio analizando debilidades</title>
+    <title>Visor PDF OneBook3D</title>
 
     <!-- Incluir librerías -->
     <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/yourrepo/js/jquery.onebook3d-2.33.js"></script>
-
-    <script src="./js/js/jquery-1.11.0.min.js"></script>
-    <script src="./js/js/jquery.mousewheel.min.js"></script>
-    <script src="./js/js/three.min.js"></script>
-    <script src="./js/js/jquery.onebook3d-2.33.js"></script>
 
     <style>
         html, body {
@@ -28,9 +23,10 @@
             justify-content: flex-start;
             align-items: center;
         }
-        #mybook {
-            width: 80%;
-            height: calc(80% - 80px); /* Ajusta el tamaño del contenedor dejando espacio para el botón */
+        #book1 {
+            width: 100%;
+            height: 90vh; /* Ajusta automáticamente al 90% de la altura de la pantalla */
+            max-height: 100%;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
             overflow: hidden;
         }
@@ -58,11 +54,11 @@
 </head>
 <body>
     <!-- Contenedor para el visor -->
-    <div id="mybook"></div>
+    <div id="book1" onebook3d="OneBook3d_933015_">&nbsp;</div>
 
     <!-- Botón para regresar a materiales -->
     <div class="return-container">
-        <a href="material.html" class="return-button"></a>
+        <a href="materiales" class="return-button"></a>
         <div class="return-text">Regresar a materiales</div>
     </div>
 
@@ -78,7 +74,7 @@
             }
 
             // Inicializar OneBook3D con las imágenes generadas
-            $('#mybook').onebook(src, {
+            $('#book1').onebook(src, {
                 startPage: 1,          // Página inicial
                 flip: 'soft',          // Animación de paso de página
                 skin: 'light',         // Tema
