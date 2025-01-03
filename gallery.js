@@ -40,8 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
       'imagenes/fotos/texcoco/foto011.png',
       'imagenes/fotos/texcoco/foto012.png',
       'imagenes/fotos/texcoco/foto013.png',
-      'imagenes/fotos/texcoco/foto014.png',
-      'imagenes/fotos/texcoco/foto015.png'
+      'imagenes/fotos/texcoco/foto014.png'
     ],
 
     'carousel-inicio': [
