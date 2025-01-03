@@ -95,6 +95,25 @@ document.addEventListener('DOMContentLoaded', function () {
       'NodoTlahuac/NODOTHAHUAC-XICO004.jpg'
     ],
 
+    'carousel-tlahuac2': [
+      'tlahuac/foto001.png',
+      'tlahuac/foto002.png',
+      'tlahuac/foto003.png',
+      'tlahuac/foto004.png',
+      'tlahuac/foto005.png',
+      'tlahuac/foto006.png',
+      'tlahuac/foto007.png',
+      'tlahuac/foto008.png',
+      'tlahuac/foto009.png',
+      'tlahuac/foto010.png',
+      'tlahuac/foto011.png',
+      'tlahuac/foto012.png',
+      'tlahuac/foto013.png',
+      'tlahuac/foto014.png',
+      'tlahuac/foto015.png',
+      'tlahuac/foto016.png'
+    ],
+
      'carousel-tula': [
       'NodoTula/NODO_TULA01.jpg',
       'NodoTula/NODO_TULA02.jpg',
