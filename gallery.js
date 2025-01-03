@@ -27,20 +27,20 @@ document.addEventListener('DOMContentLoaded', function () {
     ],
     
     'carousel-texcoco2': [
-      'imagenes/fotos/texcoco/foto001.png',
-      'imagenes/fotos/texcoco/foto002.png',
-      'imagenes/fotos/texcoco/foto003.png',
-      'imagenes/fotos/texcoco/foto004.png',
-      'imagenes/fotos/texcoco/foto005.png',
-      'imagenes/fotos/texcoco/foto006.png',
-      'imagenes/fotos/texcoco/foto007.png',
-      'imagenes/fotos/texcoco/foto008.png',
-      'imagenes/fotos/texcoco/foto009.png',
-      'imagenes/fotos/texcoco/foto010.png',
-      'imagenes/fotos/texcoco/foto011.png',
-      'imagenes/fotos/texcoco/foto012.png',
-      'imagenes/fotos/texcoco/foto013.png',
-      'imagenes/fotos/texcoco/foto014.png'
+      'imagenes/texcoco/foto001.png',
+      'imagenes/texcoco/foto002.png',
+      'imagenes/texcoco/foto003.png',
+      'imagenes/texcoco/foto004.png',
+      'imagenes/texcoco/foto005.png',
+      'imagenes/texcoco/foto006.png',
+      'imagenes/texcoco/foto007.png',
+      'imagenes/texcoco/foto008.png',
+      'imagenes/texcoco/foto009.png',
+      'imagenes/texcoco/foto010.png',
+      'imagenes/texcoco/foto011.png',
+      'imagenes/texcoco/foto012.png',
+      'imagenes/texcoco/foto013.png',
+      'imagenes/texcoco/foto014.png'
     ],
 
     'carousel-inicio': [
