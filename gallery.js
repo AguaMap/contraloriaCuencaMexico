@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
       'NodoTexcoco/NODOTEXCOCO007.jpg',
       'NodoTexcoco/NODOTEXCOCO008.jpg'
     ],
-
+    
     'carousel-texcoco2': [
       'imagenes/fotos/texcoco/foto001.png',
       'imagenes/fotos/texcoco/foto002.png',
