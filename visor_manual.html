@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudio analizando debilidades</title>
+
+    <!-- Incluir librerías -->
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/yourrepo/js/jquery.onebook3d-2.33.js"></script>
+
+    <script src="./js/js/jquery-1.11.0.min.js"></script>
+    <script src="./js/js/jquery.mousewheel.min.js"></script>
+    <script src="./js/js/three.min.js"></script>
+    <script src="./js/js/jquery.onebook3d-2.33.js"></script>
+
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        #mybook {
+            width: 100vw;
+            height: 90vh; /* Ajuste dinámico a la pantalla */
+            z-index: 1; /* Coloca el visor detrás del botón */
+            overflow: hidden;
+        }
+        .return-container {
+            position: fixed; /* Fija la posición del botón */
+            bottom: 20px;
+            left: 20px;
+            z-index: 10; /* Coloca el botón por encima del visor */
+            display: flex;
+            align-items: center;
+        }
+        .return-button {
+            width: 30px;
+            height: 30px;
+            background-image: url('./imagenes/retorno.jpg');
+            background-size: cover;
+            background-position: center;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        .return-text {
+            font-size: 16px;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <!-- Contenedor para el visor -->
+    <div id="mybook"></div>
+
+    <!-- Botón para regresar a materiales -->
+    <div class="return-container">
+        <a href="material.html" class="return-button"></a>
+        <div class="return-text">Regresar a materiales</div>
+    </div>
+
+    <script>
+        
+        $(function() {
+            // Array con las imágenes
+            const src = [];
+            const totalPages = 103; // Número total de páginas
+
+            for (let i = 1; i <= totalPages; i++) {
+                const pageNumber = i.toString().padStart(3, '0'); // Formatear a 3 dígitos
+                src.push(`pdf_manual/foto${pageNumber}.jpg`); // Cambiado para coincidir con "fotoXXX.jpg"
+            }
+
+            // Inicializar OneBook3D con las imágenes generadas
+            $('#mybook').onebook(src, {
+                startPage: 1,          // Página inicial
+                flip: 'soft',          // Animación de paso de página
+                skin: 'light',         // Tema
+                pageColor: 'white',    // Color de las páginas
+                border: 20             // Espaciado alrededor de las páginas
+            });
+        });
+    </script>
+</body>
+</html>
