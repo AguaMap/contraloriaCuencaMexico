@@ -3,13 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visor PDF OneBook3D</title>
+    <title>Estudio analizando debilidades</title>
 
     <!-- Incluir librerías -->
     <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/yourrepo/js/jquery.onebook3d-2.33.js"></script>
+
+    <script src="./js/js/jquery-1.11.0.min.js"></script>
+    <script src="./js/js/jquery.mousewheel.min.js"></script>
+    <script src="./js/js/three.min.js"></script>
+    <script src="./js/js/jquery.onebook3d-2.33.js"></script>
 
     <style>
         html, body {
@@ -23,12 +28,12 @@
             justify-content: flex-start;
             align-items: center;
         }
-        #book1 {
-            width: 100vw; /* Ocupa todo el ancho de la pantalla */
-            height: 90vh; /* Ocupa el 90% de la altura de la pantalla */
-            margin: 0 auto; /* Centrado horizontal */
-            overflow: hidden; /* Evita desbordamientos */
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra alrededor */
+        #mybook {
+            width: 80%;
+            height: calc(100% - 100px); /* Ajusta el tamaño del contenedor dejando espacio para el botón */
+            height: calc(80% - 80px); /* Ajusta el tamaño del contenedor dejando espacio para el botón */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
         }
         .return-container {
             position: absolute;
@@ -54,7 +59,7 @@
 </head>
 <body>
     <!-- Contenedor para el visor -->
-    <div id="book1" onebook3d="OneBook3d_933015_">&nbsp;</div>
+    <div id="mybook"></div>
 
     <!-- Botón para regresar a materiales -->
     <div class="return-container">
@@ -74,27 +79,13 @@
             }
 
             // Inicializar OneBook3D con las imágenes generadas
-            $('#book1').onebook(src, {
+            $('#mybook').onebook(src, {
                 startPage: 1,          // Página inicial
                 flip: 'soft',          // Animación de paso de página
                 skin: 'light',         // Tema
                 pageColor: 'white',    // Color de las páginas
                 border: 10             // Espaciado alrededor de las páginas
             });
-        });
-
-        // Ajustar tamaño dinámicamente al redimensionar la pantalla
-        window.addEventListener('resize', () => {
-            const book = document.getElementById('book1');
-            book.style.width = `${window.innerWidth}px`;
-            book.style.height = `${window.innerHeight * 0.9}px`; // 90% de la altura
-        });
-
-        // Configuración inicial al cargar la página
-        document.addEventListener('DOMContentLoaded', () => {
-            const book = document.getElementById('book1');
-            book.style.width = `${window.innerWidth}px`;
-            book.style.height = `${window.innerHeight * 0.9}px`;
         });
     </script>
 </body>
