@@ -68,14 +68,15 @@
     </div>
 
     <script>
+        
         $(function() {
             // Array con las imágenes
             const src = [];
-            const totalPages = 82; // Número total de páginas
+            const totalPages = 139; // Número total de páginas
 
             for (let i = 1; i <= totalPages; i++) {
-                const pageNumber = i.toString().padStart(2, '0');
-                src.push(`pdf_estudio/foto${pageNumber}.jpg`); // Cambiado para coincidir con "estudio_XX.jpg"
+                const pageNumber = i.toString().padStart(3, '0'); // Formatear a 3 dígitos
+                src.push(`pdf_estudio/foto${pageNumber}.jpg`); // Cambiado para coincidir con "fotoXXX.jpg"
             }
 
             // Inicializar OneBook3D con las imágenes generadas
